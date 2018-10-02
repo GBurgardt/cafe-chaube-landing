@@ -21,6 +21,14 @@
     <!-- Custom styles for this template -->
     <link href="css/business-casual.min.css" rel="stylesheet">
 
+    <!-- Sistema de mails -->
+    <script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.2.4/email.min.js"></script>
+    <script type="text/javascript">
+    (function(){
+        emailjs.init("user_Iap9IjDHW5QTdg3i8HACO");
+    })();
+    </script>
+
 </head>
 
 <body>
@@ -46,13 +54,13 @@
                         </a>
                     </li>
                     <li class="nav-item px-lg-4">
-                        <a class="nav-link text-uppercase text-expanded" href="products.html">Servicios y Productos</a>
+                        <a class="nav-link text-uppercase text-expanded" href="productos.html">Servicios y Productos</a>
                     </li>
                     <li class="nav-item px-lg-4">
-                        <a class="nav-link text-uppercase text-expanded" href="about.html">Quienes Somos</a>
+                        <a class="nav-link text-uppercase text-expanded" href="nosotros.html">Quienes Somos</a>
                     </li>
                     <li class="nav-item active px-lg-4">
-                        <a class="nav-link text-uppercase text-expanded" href="store.html">Contactanos</a>
+                        <a class="nav-link text-uppercase text-expanded" href="contactanos.html">Contactanos</a>
                     </li>
                 </ul>
             </div>
@@ -71,26 +79,26 @@
                             <span class="section-heading-lower">Cafe Chaubé</span>
                         </h2>
                         
-                        <form class="send-form" method="post">
+                        <form class="send-form">
                             <div class="item-form">
-                                <label for="name">Nombre:</label>
-                                <input type="text" id="name" />
+                                <label for="nombreCliente">Nombre:</label>
+                                <input type="text" id="nombreCliente" />
                             </div>
                             <div class="item-form">
-                                <label for="mail">E-mail:</label>
-                                <input type="email" id="mail" />
+                                <label for="mailCliente">E-mail:</label>
+                                <input type="email" id="mailCliente" />
                             </div>
                             <div class="item-form">
-                                <label for="mail">Telefono:</label>
-                                <input type="email" id="mail" />
+                                <label for="telCliente">Telefono:</label>
+                                <input type="email" id="telCliente" />
                             </div>
                             <div class="item-form">
-                                <label for="msg">Consulta:</label>
-                                <textarea id="msg"></textarea>
+                                <label for="msgCliente">Consulta:</label>
+                                <textarea id="msgCliente"></textarea>
                             </div>
 
                             <div class="btn-container">
-                                <button type="submit">
+                                <button onclick="sendMail(event);">
                                     Enviar
                                 </button>
                             </div>
@@ -117,28 +125,6 @@
         </div>
     </section>
 
-    <!-- <section class="page-section about-heading">
-      <div class="container">
-        <img class="img-fluid rounded about-heading-img mb-3 mb-lg-0" src="img/about.jpg" alt="">
-        <div class="about-heading-content">
-          <div class="row">
-            <div class="col-xl-9 col-lg-10 mx-auto">
-              <div class="bg-faded rounded p-5">
-                <h2 class="section-heading mb-4">
-                  <span class="section-heading-upper">Strong Coffee, Strong Roots</span>
-                  <span class="section-heading-lower">About Our Cafe</span>
-                </h2>
-                <p>Founded in 1987 by the Hernandez brothers, our establishment has been serving up rich coffee sourced from artisan farmers in various regions of South and Central America. We are dedicated to travelling the world, finding the best coffee, and bringing back to you here in our cafe.</p>
-                <p class="mb-0">We guarantee that you will fall in
-                  <em>lust</em>
-                  with our decadent blends the moment you walk inside until you finish your last sip. Join us for your daily routine, an outing with friends, or simply just to enjoy some alone time.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section> -->
-
     <footer class="footer text-faded text-center py-5">
         <div class="container">
             <p class="m-0 small">Copyright &copy; Cafe Chaube 2018</p>
@@ -154,39 +140,34 @@
 <!-- Script to highlight the active date in the hours list -->
 <script>
     $('.list-hours li').eq(new Date().getDay()).addClass('today');
+
+    // Manda el mail
+    const sendMail = function(e) {
+        e.preventDefault();
+
+        const nombreCliente = document.getElementById('nombreCliente').value;
+        const mailCliente = document.getElementById('mailCliente').value;
+        const telCliente = document.getElementById('telCliente').value;
+        const msgCliente = document.getElementById('msgCliente').value;
+        debugger;
+
+        var template_params = {
+            "reply_to": "no_reply",
+            "from_name": "testfromname",
+            "message_html": "el mensajito se se"
+        }
+
+        var service_id = "default_service";
+        var template_id = "template_02AbbI8e";
+        emailjs.send(service_id,template_id,template_params);
+
+        console.log('ok')
+
+    }
+
 </script>
 
 </html>
 
-
-
-<!-- <ul class="list-unstyled list-hours mb-5 text-left mx-auto">
-                            <li class="list-unstyled-item list-hours-item d-flex">
-                                Sunday
-                                <span class="ml-auto">Closed</span>
-                            </li>
-                            <li class="list-unstyled-item list-hours-item d-flex">
-                                Monday
-                                <span class="ml-auto">7:00 AM to 8:00 PM</span>
-                            </li>
-                            <li class="list-unstyled-item list-hours-item d-flex">
-                                Tuesday
-                                <span class="ml-auto">7:00 AM to 8:00 PM</span>
-                            </li>
-                            <li class="list-unstyled-item list-hours-item d-flex">
-                                Wednesday
-                                <span class="ml-auto">7:00 AM to 8:00 PM</span>
-                            </li>
-                            <li class="list-unstyled-item list-hours-item d-flex">
-                                Thursday
-                                <span class="ml-auto">7:00 AM to 8:00 PM</span>
-                            </li>
-                            <li class="list-unstyled-item list-hours-item d-flex">
-                                Friday
-                                <span class="ml-auto">7:00 AM to 8:00 PM</span>
-                            </li>
-                            <li class="list-unstyled-item list-hours-item d-flex">
-                                Saturday
-                                <span class="ml-auto">9:00 AM to 5:00 PM</span>
-                            </li>
-                        </ul> -->
+cafechaubecalidad@gmail.com
+cafe.chaube
