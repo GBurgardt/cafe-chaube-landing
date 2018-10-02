@@ -218,6 +218,44 @@ p {
   font-size: 1.2rem;
 }
 
+.send-form {
+  margin-bottom: 4%;
+}
+
+.send-form .item-form {
+  display: flex;
+  margin: 0 auto;
+  justify-content: space-between;
+  width: 56%;
+  padding: 7px 7px;
+}
+
+.send-form .item-form input, .send-form .item-form textarea {
+  z-index: 9 !important;
+}
+
+.send-form #msg {
+  min-width: 59%;
+}
+
+.send-form .btn-container {
+  margin-top: 2%;
+}
+
+.send-form .btn-container button {
+  overflow: hidden;
+  border-width: 0;
+  outline: none;
+  border-radius: 2px;
+  box-shadow: 0 0px 2px #d2974e;
+  background-color: #e6a756;
+  color: #ecf0f1;
+  transition: background-color .3s;
+  padding: 3px 12px;
+  z-index: 99 !important;
+  cursor: pointer;
+}
+
 .footer {
   background-color: rgba(47, 23, 15, 0.9);
 }
