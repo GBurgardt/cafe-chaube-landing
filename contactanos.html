@@ -8,7 +8,8 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Business Casual - Start Bootstrap Theme</title>
+    <title>Cafe Chaube</title>
+    <!-- <title>Business Casual - Start Bootstrap Theme</title> -->
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -28,6 +29,10 @@
         emailjs.init("user_Iap9IjDHW5QTdg3i8HACO");
     })();
     </script>
+
+    <!-- Framework Alert js -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
 
 </head>
 
@@ -149,25 +154,46 @@
         const mailCliente = document.getElementById('mailCliente').value;
         const telCliente = document.getElementById('telCliente').value;
         const msgCliente = document.getElementById('msgCliente').value;
-        debugger;
 
         var template_params = {
             "reply_to": "no_reply",
-            "from_name": "testfromname",
-            "message_html": "el mensajito se se"
+            "from_name": capitalizeFirstLetter(nombreCliente),
+            "message_html":`Mensaje: ${msgCliente}. Telefono: ${telCliente}. Mail: ${mailCliente}.`
         }
 
         var service_id = "default_service";
         var template_id = "template_02AbbI8e";
-        emailjs.send(service_id,template_id,template_params);
 
-        console.log('ok')
+        emailjs.send(service_id,template_id,template_params)
+            .then(function(response) {
+                swal(
+                    'Aviso',
+                    `${capitalizeFirstLetter(nombreCliente)}, su mensaje fue entregado a Café Chaube. Pronto será contactado.`,
+                    'success'
+                );
+            }, function(error) {
+                swal(
+                    'Error',
+                    `Ocurrió un problema, por favor comuníquese a algún número de más abajo`,
+                    'error'
+                );
+            });
+        
 
+
+    }
+
+
+    const capitalizeFirstLetter = (s) => {
+        return s.charAt(0).toUpperCase() + s.slice(1);
     }
 
 </script>
 
-</html>
+<style>
+.swal-button {
+    background-color: #b5824c;
+}
+</style>
 
-cafechaubecalidad@gmail.com
-cafe.chaube
+</html>

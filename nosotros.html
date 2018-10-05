@@ -1,94 +1,198 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
+<head>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Business Casual - Start Bootstrap Theme</title>
+    <title>Cafe Chaube</title>
+    <!-- <title>Business Casual - Start Bootstrap Theme</title> -->
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom fonts for this template -->
-    <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="css/business-casual.min.css" rel="stylesheet">
 
-  </head>
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="jquery.slides.min.js"></script>
 
-  <body>
+    <script>
+        $(function () {
+            $("#slides").slidesjs({
+                width: 940,
+                height: 528
+            });
+        });
+    </script>
+
+    <style>
+        /* Prevents slides from flashing */
+
+        #slides {
+        display: none;
+        }
+    </style>
+
+</head>
+
+<body>
+
+
+
 
     <h1 class="site-heading text-center text-white d-none d-lg-block">
-      <span class="site-heading-upper text-primary mb-3">Más de 25 años brindando el mejor café</span>
-      <span class="site-heading-lower">Cafe Chaube</span>
+        <span class="site-heading-upper text-primary mb-3">Más de 25 años brindando el mejor café</span>
+        <span class="site-heading-lower">Cafe Chaube</span>
     </h1>
 
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
-      <div class="container">
-        <a class="navbar-brand text-uppercase text-expanded font-weight-bold d-lg-none" href="#">Start Bootstrap</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav mx-auto">
-            <li class="nav-item px-lg-4">
-              <a class="nav-link text-uppercase text-expanded" href="index.html">Inicio
-                <span class="sr-only">(current)</span>
-              </a>
-            </li>
-            <li class="nav-item  px-lg-4">
-              <a class="nav-link text-uppercase text-expanded" href="productos.html">Servicios y Productos</a>
-            </li>
-            <li class="nav-item active px-lg-4">
-              <a class="nav-link text-uppercase text-expanded" href="nosotros.html">Quienes Somos</a>
-            </li>
-            <li class="nav-item px-lg-4">
-              <a class="nav-link text-uppercase text-expanded" href="contactanos.html">Contactanos</a>
-            </li>
-          </ul>
+        <div class="container">
+            <a class="navbar-brand text-uppercase text-expanded font-weight-bold d-lg-none" href="#">Start Bootstrap</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item px-lg-4">
+                        <a class="nav-link text-uppercase text-expanded" href="index.html">Inicio
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item  px-lg-4">
+                        <a class="nav-link text-uppercase text-expanded" href="productos.html">Servicios y Productos</a>
+                    </li>
+                    <li class="nav-item active px-lg-4">
+                        <a class="nav-link text-uppercase text-expanded" href="nosotros.html">Quienes Somos</a>
+                    </li>
+                    <li class="nav-item px-lg-4">
+                        <a class="nav-link text-uppercase text-expanded" href="contactanos.html">Contactanos</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-      </div>
     </nav>
 
     <section class="page-section about-heading">
-      <div class="container">
-        <img class="img-fluid rounded about-heading-img mb-3 mb-lg-0" src="img/bolsas.jpg" alt="">
-        <div class="about-heading-content">
-          <div class="row">
-            <div class="col-xl-9 col-lg-10 mx-auto">
-              <div class="bg-faded rounded p-5">
-                <h2 class="section-heading mb-4">
-                  <span class="section-heading-upper">Grán Café, Grandes Valores</span>
-                  <span class="section-heading-lower">Nuestros valores</span>
-                </h2>
-                <p>En nuestra planta de tostación y torrefacción se realizan pruebas constantemente tanto en la selección de granos como así en su envasado, tratando que a nuestros clientes le brindemos siempre calidad, servicios y una esmerada atención.</p>
-                <p class="mb-0">Café Chaubé aporta seriedad y confiabilidad, dado que a través de tantos años han sido nuestros consumidores quienes así lo afirman. Respeto, cumplimiento, dedicación, vocación, profesionalismo; esto es lo que brindamos a nuestros señores clientes</p>
-                <!-- <p>Founded in 1987 by the Hernandez brothers, our establishment has been serving up rich coffee sourced from artisan farmers in various regions of South and Central America. We are dedicated to travelling the world, finding the best coffee, and bringing back to you here in our cafe.</p>
-                <p class="mb-0">We guarantee that you will fall in <em>lust</em> with our decadent blends the moment you walk inside until you finish your last sip. Join us for your daily routine, an outing with friends, or simply just to enjoy some alone time.</p> -->
-              </div>
+        <div class="container">
+            <img class="img-fluid rounded about-heading-img mb-3 mb-lg-0" src="img/bolsas.jpg" alt="">
+            <div class="about-heading-content">
+                <div class="row">
+                    <div class="col-xl-9 col-lg-10 mx-auto">
+                        <div class="bg-faded rounded p-5">
+                            <h2 class="section-heading mb-4">
+                                <span class="section-heading-upper">Grán Café, Grandes Valores</span>
+                                <span class="section-heading-lower">Nuestros valores</span>
+                            </h2>
+                            <p>En nuestra planta de tostación y torrefacción se realizan pruebas constantemente tanto en la
+                                selección de granos como así en su envasado, tratando que a nuestros clientes le brindemos
+                                siempre calidad, servicios y una esmerada atención.
+                            </p>
+                            <p class="mb-0">Café Chaubé aporta seriedad y confiabilidad, dado que a través de tantos años han sido nuestros
+                                consumidores quienes así lo afirman. Respeto, cumplimiento, dedicación, vocación, profesionalismo;
+                                esto es lo que brindamos a nuestros señores clientes</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
     </section>
 
+    <section class="page-section about-heading">
+            <div class="container">
+                    <div class="img-fluid rounded about-heading-img mb-3 mb-lg-0" id="slides">
+                            <img src="img/casa/1.jpeg">
+                            <!-- <img src="img/casa/2.jpeg"> -->
+                            <img src="img/casa/3.jpeg">
+                            <img src="img/casa/4.jpeg">
+                            <!-- <img src="img/casa/5.jpeg"> -->
+                        </div>
+                <!-- <img class="img-fluid rounded about-heading-img mb-3 mb-lg-0" src="img/bolsas.jpg" alt=""> -->
+
+                <div class="about-heading-content slides-descrip">
+                    <div class="row">
+                        <div class="col-xl-9 col-lg-10 mx-auto">
+                            <div class="bg-faded rounded p-5">
+                                <h2 class="section-heading mb-4">
+                                    <span class="section-heading-upper">Historia, Nombre</span>
+                                    <span class="section-heading-lower">Nuesta Casa</span>
+                                    <!-- <span class="section-heading-upper">Valores, Familia</span>
+                                    <span class="section-heading-lower">Nuestra Casa</span> -->
+                                </h2>
+                                <!-- <p>Nuestra casa, acá sucede la magia. 
+                                </p> -->
+                                <p>
+                                    Así... "cuenta la leyenda":
+                                    Kaldi, era uno de los mil pastores de Abisinia. Desde el amanecer hasta que el sol se ocultaba, acompañaba a sus cabras por montes y valles, tratado siempre de encontrar un mejor pastaje para su rebaño. 
+                                    Kaldi observaba con verdadero ahínco a su cabras y un día llegó a preguntarse por qué algunas de ellas eran más inquietas que otras. ¿No era el mismo pastor que las conducía? ¿Por qué entonces tanta diferencias de comportamiento?.
+                                    Comentó su inquietud con los monjes del lugar.
+                                </p>
+                                <p >
+                                    Los Sievos del Señor desconfiaron de la alimentación de los animales y no fue muchos lo que demoraron en comprobar sus conjeturas. En la región en que el rebaño se apacentaba encontraron un arbusto elegante carente de follaje.
+                                    Tal era el apetito con que las cabras la envestían que recogieron algunos frutos y ramas y prepararon una infusión que al beberla -los más arriesgados-, les proporcionó un estado de euforia y placer... se había descubierto el café.
+                                    
+                                </p>
+                                <p class="mb-0">
+                                    Fueron los drabes quienes lo difundieron por tierras de Oriente entre los siglos XVI y XVII; exploradores europeos que visitaban el Oriente lo citan en sus relatos o libros de viajes, entre ellos Leonardo Rauwolf, Thavernier, Della Valle, etc., dedicaron extensas págicas al estudio de la buena bebida, tenida muy en cuenta y que era llamada: Chaubé.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     <footer class="footer text-faded text-center py-5">
-      <div class="container">
-        <p class="m-0 small">Copyright &copy; Cafe Chaube 2018</p>
-      </div>
+        <div class="container">
+            <p class="m-0 small">Copyright &copy; Cafe Chaube 2018</p>
+        </div>
     </footer>
 
-    <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-  </body>
+</body>
+
+<style>
+    
+
+    a.slidesjs-previous.slidesjs-navigation {
+        position: relative;
+        bottom: 325px;
+        left: 30px;
+        z-index: 99;
+        color: #f3f2f7;
+        font-size: 1.2rem;
+        background: #291009b5;
+        padding: 9px;
+        border-radius: 9px;
+    }
+
+    a.slidesjs-next.slidesjs-navigation {
+        position: relative;
+        bottom: 325px;
+        left: 930px;
+        z-index: 99;
+        color: #f3f2f7;
+        font-size: 1.2rem;
+        background: #291009b5;
+        padding: 9px;
+        border-radius: 9px;
+    }
+
+    .slidesjs-pagination {
+        display: none;
+    }
+</style>
 
 </html>

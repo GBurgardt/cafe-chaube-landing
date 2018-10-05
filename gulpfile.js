@@ -78,3 +78,15 @@ gulp.task('dev', ['css', 'browserSync'], function() {
   gulp.watch('./scss/*.scss', ['css']);
   gulp.watch('./*.html', browserSync.reload);
 });
+
+// Copiar a publico
+// gulp.task('publico', function() {
+
+//   // Bootstrap
+//   gulp.src([
+//       './*',
+//       '!./node_modules*',
+//     ])
+//     .pipe(gulp.dest('./public'))
+
+// });
